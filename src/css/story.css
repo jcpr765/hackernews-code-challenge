@@ -1,0 +1,25 @@
+.container-fluid {
+    background-color: #ff6600;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+    min-height: 170px;
+    position: fixed;
+    font-size: 1em;
+}
+
+.details {
+    color: #f2f2f2;
+}
+
+.links {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+.score{
+    background-color: #cc5200;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
