@@ -1,7 +1,7 @@
 import React from 'react';
 import request from 'request';
 import Story from './Story';
-import CommentContainer2 from './CommentContainer2';
+import CommentContainer from './CommentContainer';
 
 export default class StoryContainer extends React.Component {
 
@@ -14,7 +14,7 @@ export default class StoryContainer extends React.Component {
         const {children} = this.props.story;
         const result = children.map((id)=>{
           return (
-            <CommentContainer2 id={id} key={id} offset={0} {...this.props}/>
+            <CommentContainer id={id} key={id} offset={0} {...this.props}/>
           )
         });
         return result;
@@ -24,7 +24,6 @@ export default class StoryContainer extends React.Component {
     componentDidMount(){
         request.get(`${process.env['REACT_APP_API_ADDRESS']}/${process.env['REACT_APP_STORY_ID']}.json?print=pretty`, (err, res, body) =>{
                 if(!err){
-                    console.log(body);
                     const {by, descendants, kids, score, time, title, url} = JSON.parse(body);
                     this.props.setStory(by, descendants, kids, score, time, title, url);
                 }

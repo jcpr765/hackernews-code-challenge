@@ -25,11 +25,3 @@ export const addComment = (author, id, children, parent, text, time) => {
     };
 }
 
-// export const toggleVisibility = (id, children) => {
-//     return {
-//         type: 'TOGGLE_VISIBILITY',
-//         id,
-//         children
-//     }
-// }
-
