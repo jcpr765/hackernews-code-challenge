@@ -16,8 +16,8 @@ const Comment = (props) => {
     
 
     return (
-        <div style={style}>
-            <div>
+        <div>
+            <div style={style}>
                 <div className="user-info">
                     <span style={orange}>
                         <FontAwesome name="user"/>
@@ -28,6 +28,7 @@ const Comment = (props) => {
                 </div>
                 <div className="user-comment">{renderHTML(props.text)}</div>
             </div>
+            {(typeof props.children !== "undefined") ? props.children:null}
         </div>
     );
 }

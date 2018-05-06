@@ -23,9 +23,11 @@ export default class StoryContainer extends React.Component {
 
     componentDidMount(){
         request.get(`${process.env['REACT_APP_API_ADDRESS']}/${process.env['REACT_APP_STORY_ID']}.json?print=pretty`, (err, res, body) =>{
-                console.log(body);
-                const {by, descendants, kids, score, time, title, url} = JSON.parse(body);
-                this.props.setStory(by, descendants, kids, score, time, title, url);
+                if(!err){
+                    console.log(body);
+                    const {by, descendants, kids, score, time, title, url} = JSON.parse(body);
+                    this.props.setStory(by, descendants, kids, score, time, title, url);
+                }
             });
     }
 
