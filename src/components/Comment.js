@@ -28,7 +28,7 @@ const Comment = (props) => {
                 </div>
                 <div className="user-comment">{renderHTML(props.text)}</div>
             </div>
-            {/*(typeof props.children !== "undefined") ? console.log(props.children):null*/}
+            {/*(typeof props.children !== "undefined") ? props.children:null*/}
         </div>
     );
 }

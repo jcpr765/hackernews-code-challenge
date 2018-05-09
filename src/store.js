@@ -12,7 +12,7 @@ const defaultState = {
         title: "",
         url: "",
     },
-    comments: {}
+    comments: []
 };
 const store = createStore(rootReducer, defaultState);
 
